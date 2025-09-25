@@ -9,6 +9,7 @@ import { getTrades, type Trade } from "@/view-functions/getTrades";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
+import { TrendingUp, Play, History } from "lucide-react";
 
 export function Trading() {
   const { account, signAndSubmitTransaction } = useWallet();
@@ -62,7 +63,10 @@ export function Trading() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h3 className="text-xl font-semibold">Trading</h3>
+      <h3 className="text-xl font-semibold flex items-center gap-2">
+        <TrendingUp className="text-blue-400" size={24} />
+        Trading
+      </h3>
       <div className="flex gap-3 items-end">
         <div className="flex flex-col gap-2">
           <label className="text-sm">Amount In (u64)</label>
@@ -82,12 +86,21 @@ export function Trading() {
             placeholder="1200"
           />
         </div>
-        <Button disabled={!account} onClick={onTrade}>Execute Trade</Button>
-        <Button variant="secondary" disabled={!account} onClick={onInit}>Init Account</Button>
+        <Button disabled={!account} onClick={onTrade} className="flex items-center gap-2">
+          <Play className="text-green-400" size={16} />
+          Execute Trade
+        </Button>
+        <Button variant="secondary" disabled={!account} onClick={onInit} className="flex items-center gap-2">
+          <TrendingUp className="text-yellow-400" size={16} />
+          Init Account
+        </Button>
       </div>
 
       <div className="flex flex-col gap-2">
-        <h4 className="text-lg font-medium">Trade History</h4>
+        <h4 className="text-lg font-medium flex items-center gap-2">
+          <History className="text-purple-400" size={20} />
+          Trade History
+        </h4>
         <div className="grid grid-cols-4 gap-2 text-sm font-medium">
           <div>Trader</div>
           <div>Amount In</div>

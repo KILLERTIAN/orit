@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
+import Silk from "./Silk";
 
 export function HeroSection() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden bg-black">
-      {/* Animated dark silk background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="w-full h-full bg-[radial-gradient(circle_at_20%_30%,#111,transparent_40%),radial-gradient(circle_at_80%_70%,#222,transparent_40%)] animate-[pulse_12s_infinite_alternate]" />
-      </div>
-
-      {/* Subtle blurred glowing orb */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center">
-        <div className="relative w-[28rem] h-[28rem] bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse" />
-      </div>
+    <section className="relative h-full min-h-screen w-full flex items-center justify-center text-center text-white overflow-hidden bg-black">
+      <Silk
+        speed={5}
+        scale={1}
+        color="#7B7481"
+        noiseIntensity={1.5}
+        rotation={0}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}
+      />
 
       {/* Content */}
       <div className="relative z-20 p-6 max-w-4xl mx-auto">

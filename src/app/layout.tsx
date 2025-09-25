@@ -9,10 +9,13 @@ import { WrongNetworkAlert } from "@/components/WrongNetworkAlert";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  applicationName: "Aptos Boilerplate Template",
-  title: "NextJS Boilerplate Template",
-  description: "Aptos Boilerplate Template",
+  applicationName: "Orit Trading Platform",
+  title: "Orit Trading Platform",
+  description: "Professional trading platform on Aptos blockchain with copy trading features",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

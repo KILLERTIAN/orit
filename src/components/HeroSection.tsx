@@ -18,14 +18,21 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-20 p-6 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tight text-white">
-          Decentralized Trading on Aptos
+          Trade Smarter. <br/>Trust On-Chain.
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-10">
-          Empowering traders with secure, transparent, and efficient copy trading.
+          Orit is the first Aptos platform combining <span className="text-white font-semibold">copy trading </span> 
+          with verifiable <span className="text-white font-semibold">reputation</span> and decentralized identity 
+          so you always know who you’re following.
         </p>
-        <button className="px-10 py-4 bg-white text-black rounded-xl text-lg font-semibold shadow-lg hover:bg-gray-200 transition-all duration-300">
-          Start Trading
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="px-10 py-4 bg-white text-black rounded-xl text-lg font-semibold shadow-lg hover:bg-gray-200 transition-all duration-300">
+            Explore Orit
+          </button>
+          <button className="px-10 py-4 bg-gray-800 text-white border border-gray-600 rounded-xl text-lg font-semibold shadow-lg hover:bg-gray-700 transition-all duration-300">
+            View Top Traders
+          </button>
+        </div>
       </div>
     </section>
   );
